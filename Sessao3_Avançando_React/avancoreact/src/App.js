@@ -5,8 +5,36 @@ import City from './assets/city.jpg'
 import MenageData from './components/MenageData';
 import ListRender from './components/ListRender';
 import CondicionalRender from './components/CondicionalRender';
+import ShowUserName from './components/ShowUserName';
+import {useState} from 'react';
+import CarDetails from './components/CarDetails';
+import Fragment from './components/Fragment';
+import Container from './components/Container';
+import ExecuteFunction from './components/ExecuteFunction';
+import Message from './components/Message';
+import ChangeMessageState from './components/ChangeMessageState';
 
 function App() {
+  const name = "Gabriel"
+  const [userName] = useState("Maria")
+
+  const cars = [
+    {id:1, brand:"Ferrari", color:"Amarela", newCar:true, km:0},
+    {id:2, brand:"Hyundai", color:"Preta", newCar:false, km:10000},
+    {id:3, brand:"Porshe", color:"Vermelha", newCar:true, km:0},
+    
+  ]
+
+  function showMenssage(){
+    console.log("Evento componente pai")
+  }
+
+  //Variáveis da elevação de state
+  const [message, SetMessage] = useState("")
+  const handleMessage = (msg) =>{
+    SetMessage(msg)
+  }
+
   return (
     <div className="App">
       <h1>Avançando em React</h1>
@@ -16,8 +44,50 @@ function App() {
         {/*Imagem em asset */}
         <img src={City} alt="Cidade" />
         <MenageData/>
+
+        {/*Renderização de listas */}
         <ListRender/>
+
+        {/*Condicionais na renderização de listas */}
         <CondicionalRender/>
+
+        {/*Props */}
+        <ShowUserName name={userName} />
+        {/*Destructuring , valores numericos entre chaves e strings em aspas*/}
+        
+        <CarDetails brand="VW" km={10000} color="Azul" newCar={false}/>
+
+        {/*Reaproveitando PROPS */}
+        <CarDetails brand="Ford" km={0} color="Vermelho" newCar={true}/> 
+        <CarDetails brand="Fiat" km={60000} color="Cinza" newCar={false}/> 
+
+        {/*Loop em array de objetos */}
+        {cars.map((car) => (
+          <CarDetails 
+          key={car.id}
+          brand={car.brand} 
+          color={car.color} 
+          km={car.km} 
+          newCar={car.newCar} />
+        ))}
+
+        {/*Fragment */}
+        <Fragment propFragment= "Teste"/>
+
+        {/*Children */}
+        <Container MyValue="teste">
+          <p>E esse é o conteúdo</p>
+        </Container>
+        <Container MyValue="teste2">
+          <h5>Testando Container</h5>
+        </Container>
+
+        {/*Executar função*/}
+        <ExecuteFunction myFunction={showMenssage}/>
+
+        {/*Elevação de state  STATE LIFT*/}
+        <Message msg={message}/>
+        <ChangeMessageState handleMessage={handleMessage}/>
       </div>
     </div>
   );
