@@ -1,0 +1,20 @@
+.lista{
+    background-color:rgba(0, 0, 0, 0.678);
+    color: white;
+    margin: 15px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    text-align: ;
+}
+.titulo{
+    background-color: gray;
+    margin: 15px;
+    color:white;
+    font-size: 1.8em;
+    border-radius: 10px;
+    text-align: center;
+}
+p{
+    margin:5px;
+    padding: 5px;
+}
