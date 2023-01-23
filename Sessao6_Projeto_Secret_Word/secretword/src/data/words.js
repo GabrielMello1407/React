@@ -1,3 +1,5 @@
 export const wordsList = {
-  gostosa:["Viviane","Maze", "Gisele", "Janaina", "Silvia", "Regina","Heliana", "Luciana"]
+  direito:["Direito do trabalho", "Penal",  "Normas Juridicas" ]
+  comidas:["Arroz", "feijão", "lasanha", "Macarrão", "Ovo" ]
+  objetos:["cadeira", "mesa", "Prato", "garfo", "Faca", "banco", "cama", "estojo"]
 };
