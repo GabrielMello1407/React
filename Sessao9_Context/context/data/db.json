@@ -1,0 +1,19 @@
+{
+   "products": [
+        {
+        "id":1,
+        "name":"Chapéu",
+        "price": 22.9
+        },
+        {
+        "id":2,
+        "name":"Blusa",
+        "price": 69.9
+        },
+        {
+        "id":3,
+        "name":"Bolsa",
+        "price": 129.9
+        }
+    ]
+}
