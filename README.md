@@ -1,2 +1,4 @@
 # React
  Estudos de react js
+
+# NÃO HOUVE SESSÃO 10 POIS , EU FIZ ELA NA PASTA CHAMADA MINIBLOG
